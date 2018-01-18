@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
 public class MainActivity extends AppCompatActivity {
 
     EditText loopNumberInput;
@@ -86,13 +87,13 @@ public class MainActivity extends AppCompatActivity {
                                 loopNumber);
                     }
                     StartTime = SystemClock.uptimeMillis();
-                    handler.postDelayed(runnable, 0);
+                    handler.postDelayed(circuitRunnable, 0);
                     reset.setEnabled(false);
                     ((TextView) findViewById(R.id.startTimer)).setText("Pause");
                     chronoIsRunning = true;
                 } else {
                     timeBuffer += millisecondTime;
-                    handler.removeCallbacks(runnable);
+                    handler.removeCallbacks(circuitRunnable);
                     reset.setEnabled(true);
                     ((TextView) findViewById(R.id.startTimer)).setText("Start");
                     chronoIsRunning = false;
@@ -108,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public Runnable runnable = new Runnable() {
+    public Runnable circuitRunnable = new Runnable() {
 
         public void run() {
             millisecondTime = SystemClock.uptimeMillis() - StartTime;
