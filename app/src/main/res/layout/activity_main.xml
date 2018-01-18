@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEFF1"
+    tools:context="chrono.mts.simple_chrono.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="344dp"
+        android:layout_height="495dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/currentTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView9"
+            android:layout_alignBottom="@+id/textView9"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="54dp"
+            android:text="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/currentLoop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView8"
+            android:layout_alignBottom="@+id/textView8"
+            android:layout_alignStart="@+id/currentTimer"
+            android:text="1"
+            tools:layout_editor_absoluteX="283dp"
+            tools:layout_editor_absoluteY="224dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="9dp"
+            android:layout_marginStart="19dp"
+            android:text="00:00"
+            android:textColor="#009688"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="251dp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignStart="@+id/textView9"
+            android:text="Boucle actuelle"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="224dp" />
+
+        <Button
+            android:id="@+id/startTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/resetButton"
+            android:layout_alignBottom="@+id/resetButton"
+            android:layout_alignStart="@+id/textView"
+            android:text="Start"
+            app:layout_constraintEnd_toStartOf="@+id/button3"
+            tools:layout_editor_absoluteY="61dp" />
+
+        <EditText
+            android:id="@+id/loopNumberInput"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/startTimer"
+            android:layout_marginTop="47dp"
+            android:ems="10"
+            android:hint="Nombre de boucles"
+            android:inputType="number"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/timersNumber"
+            android:layout_below="@+id/timersNumber"
+            android:layout_marginTop="88dp"
+            android:text="Reset"
+            tools:layout_editor_absoluteX="88dp"
+            tools:layout_editor_absoluteY="61dp" />
+
+        <TextView
+            android:id="@+id/timersNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/loopNumberInput"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="37dp"
+            android:text="Timers: 2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="128dp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView"
+            android:layout_toEndOf="@+id/loopNumberInput"
+            android:text="Timer actuel"
+            tools:layout_editor_absoluteX="169dp"
+            tools:layout_editor_absoluteY="251dp" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

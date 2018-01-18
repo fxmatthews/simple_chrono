@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">simple_chrono</string>
+    <string name="alarms_scheduled">Alarms scheduled!</string>
+</resources>
